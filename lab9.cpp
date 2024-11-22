@@ -43,15 +43,12 @@ void **printG(int **G, int size){
 	}
 	return 0;
 }
-//int **G=NULL, size = 5, vis[5] = {0};
 void BFS_dist (int **G, int size, int *dist, int s){
     queue <int> q;
     q.push (s);
     dist[s]=0;
-	//vis[s] = 1;
 	while (!q.empty()){
 	    s = q.front();
-	    //printf("%d ", s);
 	    q.pop();
 	    for(int i=0; i<size; i++){
             if(G[s][i] == 1&&dist[i]==-1){
